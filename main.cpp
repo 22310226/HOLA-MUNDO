@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <iostream>
 #include <Mascota.hpp>
 #include <Alimento.hpp>
@@ -13,5 +14,13 @@ int main(int argc, char const *argv[])
     m2.Comer(a2);
     cout << "Mascota 1, Energia:" << m1.LeerEnergia() << endl
          << "Mascota 2, Energia:" << m2.LeerEnergia() << endl;
+=======
+
+#include <iostream>
+using namespace std;
+int main(int argc, char const *argv[])
+{
+   cout <<"Hola" <<"22310226" <<endl; 
+>>>>>>> f7a3749 (Version 2)
     return 0;
 }

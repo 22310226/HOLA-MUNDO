@@ -1,0 +1,104 @@
+@startuml mascota 
+package Mascotas {
+class Mascota {
+-pelo:Pelo
+-pata: Pata
+-oreja: Oreja
++Comer(Alimento)
++Habitacion(Sueño)
+
+}
+}
+package Alimentos {
+class Alimento
+class Carne
+}
+package Necesidad{
+Class Necesidad
+Class Vida
+Class Baño
+Class Sueño
+}
+package Juguete{
+class Juguete
+Class Balon
+Class Pelota
+}
+package Emocion{
+Class Emocion 
+Class Felicidad
+class Tristeza
+ }
+package Posion{
+Class Energizante 
+Class Posion
+}
+package Jugador{
+Class Dueño 
+Class Jugador
+Class Dinero
+Class Punto
+}
+package Uso {
+Class Habitacion
+Class Lampara
+Class Ropa
+}
+package Atributos {
+Class Pelo
+Class Oreja
+Class Pata
+}
+Mascota *-- Necesidad
+
+Mascota *-- Pelo 
+
+Mascota *-- Oreja
+
+Mascota *-- Pata
+
+Mascota"1" o-- "1"Alimento 
+
+Pelota  --|> Juguete 
+
+Mascota "1" o-- "0,1" Juguete 
+
+Carne --|> Alimento  
+
+Mascota "1" *-- "1" Vida 
+
+Mascota "1" o-- "0,1" Baño
+
+Jugador "1" *-- "*" Punto
+
+Emocion "1" --* "1" Mascota
+
+Felicidad --|> Emocion 
+
+Tristeza --|> Emocion 
+
+Mascota "1" o-- "0,1" Habitacion
+
+Habitacion "1" *-- "0,1" Lampara
+
+Balon --|> Juguete
+
+Mascota "1" o-- "10" Posion 
+
+Energizante --|> Posion
+
+Jugador "1" o-- "1..*" Punto
+
+Punto --|> Dinero 
+
+Baño --|> Necesidad 
+
+Comer --|> Necesidad
+
+Mascota "1" o-- "0,1" Ropa 
+
+Sueño --|> Necesidad
+
+Mascota "1" *-- "3" Dueño 
+
+

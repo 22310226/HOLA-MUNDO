@@ -5,10 +5,10 @@ class Mascota
 {
 private:
     int Energia;
-    int Felicidad;
+    std::string nombre;
 
 public:
-Mascota() {
+Mascota(std::string nombre) {
    this ->Energia=0;
    this -> Felicidad =0; 
 
